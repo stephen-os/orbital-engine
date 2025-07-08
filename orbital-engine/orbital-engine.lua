@@ -9,18 +9,18 @@ project "OrbitalEngine"
 
    includedirs
    {
-      "../lumina/Lumina/src",
+      "../lumina/lumina/src",
 
-      "../lumina/Dependencies/imgui",
-      "../lumina/Dependencies/glew/include",
-      "../lumina/Dependencies/glfw/include",
-      "../lumina/Dependencies/glm",
-      "../lumina/Dependencies/glad/include",
-      "../lumina/Dependencies/tinygltf",
-      "../lumina/Dependencies/stb_image",
-      "../lumina/Dependencies/imguifd",
-      "../lumina/Dependencies/spdlog/include"
-   }
+      "../lumina/dependencies/imgui",
+      "../lumina/dependencies/glew/include",
+      "../lumina/dependencies/glfw/include",
+      "../lumina/dependencies/glm",
+      "../lumina/dependencies/glad/include",
+      "../lumina/dependencies/tinygltf",
+      "../lumina/dependencies/stb_image",
+      "../lumina/dependencies/imguifd",
+      "../lumina/dependencies/spdlog/include"
+   d
 
     links
     {

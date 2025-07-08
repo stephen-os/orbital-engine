@@ -1,4 +1,4 @@
--- premake5.lua
+-- orbital-engine.lua
 workspace "OrbitalEngine"
    architecture "x64"
    configurations { "Debug", "Release", "Dist" }
@@ -6,8 +6,10 @@ workspace "OrbitalEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-include "lumina/LuminaExternal.lua"
+-- Lumina
+include "lumina/lumina-external.lua"
 
+-- Orbital Engine
 group "App"
    include "orbital-engine"
 group ""

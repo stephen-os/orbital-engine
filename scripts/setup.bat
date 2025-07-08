@@ -1,6 +1,6 @@
 @echo off
 
 pushd ..
-lumina\Dependencies\premake\premake5.exe --file=premake5.lua vs2022
+lumina\dependencies\premake\premake5.exe --file=orbital-engine.lua vs2022
 popd
 pause
