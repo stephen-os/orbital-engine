@@ -11,5 +11,5 @@ include "lumina/lumina-external.lua"
 
 -- Orbital Engine
 group "App"
-   include "orbital-engine"
+   include "orbital-engine/orbital-engine.lua"
 group ""

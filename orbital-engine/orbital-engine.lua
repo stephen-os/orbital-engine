@@ -20,7 +20,7 @@ project "OrbitalEngine"
       "../lumina/dependencies/stb_image",
       "../lumina/dependencies/imguifd",
       "../lumina/dependencies/spdlog/include"
-   d
+   }
 
     links
     {
@@ -29,8 +29,8 @@ project "OrbitalEngine"
 
     buildoptions { "/utf-8" }
 
-   targetdir ("../../bin/" .. outputdir .. "/%{prj.name}")
-   objdir ("../../bin-int/" .. outputdir .. "/%{prj.name}")
+   targetdir ("../bin/" .. outputdir .. "/%{prj.name}")
+   objdir ("../bin-int/" .. outputdir .. "/%{prj.name}")
 
    filter "system:windows"
       systemversion "latest"
