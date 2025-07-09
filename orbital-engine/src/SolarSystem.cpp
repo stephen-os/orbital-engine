@@ -180,7 +180,7 @@ namespace Lumina
             };
 
             // Asteroid belt configuration - positioned between Mars and Jupiter
-            constexpr int asteroidCount = 500; // Reduced for performance
+            constexpr int asteroidCount = 1000; // Reduced for performance
             constexpr float beltInnerRadius = 4500.0f; // After Mars orbit
             constexpr float beltOuterRadius = 6200.0f; // Before Jupiter orbit
             constexpr float asteroidScaleBase = 3.0f; // Increased base size
