@@ -10,7 +10,6 @@ in vec3 v_Bitangent;
 in mat3 v_TBN;
 in vec4 v_InstanceColor;
 
-// Enhanced Material uniforms
 struct Material 
 {
     vec3 Albedo;
@@ -50,13 +49,15 @@ uniform int u_HasAlphaTexture;
 uniform int u_HasEnvironmentMap;
 
 // Lighting uniforms
-struct DirectionalLight {
+struct DirectionalLight 
+{
     vec3 Direction;
     vec3 Color;
     float Intensity;
 };
 
-struct PointLight {
+struct PointLight 
+{
     vec3 Position;
     vec3 Color;
     float Intensity;
@@ -155,18 +156,14 @@ void main()
     // Handle point rendering
     if (u_RenderMode == 2) // Points mode
     {
-        // Use instance color if available, otherwise fallback to green
-        vec3 pointColor = v_InstanceColor.a > 0.0 ? v_InstanceColor.rgb : GREEN;
-        FragColor = vec4(pointColor, 1.0f); 
+        FragColor = vec4(GREEN, 1.0f); 
         return;
     }
     
     // Handle wireframe rendering
     if (u_RenderMode == 1) // Wireframe mode
     {   
-        // Use instance color if available, otherwise fallback to green
-        vec3 wireColor = v_InstanceColor.a > 0.0 ? v_InstanceColor.rgb : GREEN;
-        FragColor = vec4(wireColor, 1.0f);
+        FragColor = vec4(GREEN, 1.0f);
         return;
     }
     

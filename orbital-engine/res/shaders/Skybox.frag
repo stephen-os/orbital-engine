@@ -1,8 +1,8 @@
-#version 450 core
+#version 460 core
 
 out vec4 FragColor;
 
-in vec3 v_TexCoord; // This should be the world position used as cubemap coordinates
+in vec3 v_TexCoord;
 
 uniform samplerCube u_Skybox;
 
@@ -23,6 +23,12 @@ uniform mat4 u_RotationMatrix;
 // Time of day properties
 uniform int u_UseTimeOfDay;
 uniform float u_TimeOfDay;
+
+// Render mode
+uniform int u_RenderMode = 0;
+
+// Constants
+const vec3 GREEN = vec3(0.0, 1.0, 0.3);
 
 // Utility functions
 vec3 adjustSaturation(vec3 color, float saturation)
@@ -53,6 +59,20 @@ vec3 applyTimeOfDay(vec3 color, float timeOfDay)
 
 void main()
 {
+    // Handle point rendering
+    if (u_RenderMode == 2) // Points mode
+    {
+        FragColor = vec4(GREEN, 1.0f); 
+        return;
+    }
+    
+    // Handle wireframe rendering
+    if (u_RenderMode == 1) // Wireframe mode
+    {   
+        FragColor = vec4(GREEN, 1.0f);
+        return;
+    }
+
     vec3 texCoord = v_TexCoord;
     
     // Apply rotation if enabled
